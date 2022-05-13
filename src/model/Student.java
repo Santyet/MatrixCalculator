@@ -6,6 +6,7 @@ public class Student {
     private String age;
     private double average;
     private String studentId;
+    private String[][] notes;
 
     public Student(String name, String age, double average, String studentId) {
         this.name = name;
@@ -18,6 +19,27 @@ public class Student {
 
         return "\nStudent name: " + name + "\nStudent age: " + age + "\nStudent average: " + average + "\nStudent id: " + studentId + "\n";
     }
+
+    public void fillNotes(String subject1, String subject2, String subject3, String nameNote1, String nameNote2, String nameNote3){
+
+		notes[0][0] = "";
+		notes[0][1] = "\t\t" + subject1;
+		notes[0][2] = "\t" + subject2;
+		notes[0][3] = "\t" + subject3;
+
+		notes[1][0] = nameNote1;
+		notes[2][0] = nameNote2;
+		notes[3][0] = nameNote3;
+
+	}
+
+    public void assignNotes(double note1,double note2,double note3,double note4,double note5,double note6,double note7,double note8,double note9){
+
+        
+
+
+    }
+   
 
     /**
      * @return String return the name
@@ -75,6 +97,13 @@ public class Student {
      */
     public void setAge(String age) {
         this.age = age;
+    }
+
+
+    public void setNotes(double note1,double note2,double note3,double note4,double note5,double note6,double note7,double note8,double note9){
+
+
+
     }
 
 }

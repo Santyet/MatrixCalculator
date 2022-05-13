@@ -241,6 +241,62 @@ public class MatrixCalculator {
 
 	}
 
+	public void fillNotes(String id, String subject1, String subject2, String subject3, String nameNote1, String nameNote2, String nameNote3){
+
+		boolean done = false;
+
+		for (int i=0; i<10  ; i ++) {
+			for (int j=0; j<10  ; j++) {
+				if(studentMatrices[i][j]!=null & done==false){
+
+					if(studentMatrices[i][j].getStudentId().equals(id)){
+
+						studentInfo.get(i).fillNotes(subject1, subject2, subject3, nameNote1, nameNote2, nameNote3);
+					}
+				}
+			}
+		}
+
+
+	}
+
+	public String assignNotes(String id, double note1,double note2,double note3,double note4,double note5,double note6,double note7,double note8,double note9){
+
+		boolean done = false;
+
+		for (int i=0; i<10  ; i ++) {
+			for (int j=0; j<10  ; j++) {
+				if(studentMatrices[i][j]!=null & done==false){
+
+					if(studentMatrices[i][j].getStudentId().equals(id)){
+
+						for(int a = 1;a<4;a++){
+
+							for(int e = 1;e<5;e++){
+
+								studentMatrices[i][j].setNotes(note1, note2, note3, note4, note5, note6, note7, note8, note9);
+							}
+						}
+
+						done = true;
+					}
+
+				}
+		  	}	
+
+		}
+
+		for(int i=1;i<4;i++){
+			for(int j = 1;j<4;j++){
+				
+			}
+
+		}
+
+
+		return "Notes added";
+	}
+
 	
 
 }
