@@ -1,5 +1,6 @@
 package ui;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.MatrixCalculator;
@@ -85,6 +86,12 @@ public class Main {
 
 		case 8:
 			System.out.println(calculator.showList());
+
+		break;
+
+		case 9:
+			askForNotes();
+		break;
 		
 		default:
 			System.out.println("Error, wrong option");
@@ -202,8 +209,8 @@ public class Main {
 
 	public void askForNotes(){
 
-		double note1,note2,note3,note4,note5,note6,note7,note8,note9;
-		String nameSubject1, nameSubject2, nameSubject3, id, nameNote1, nameNote2, nameNote3, nameNote4, nameNote5, nameNote6, nameNote7, nameNote8, nameNote9;
+		double[] notes = new double[9];
+		String nameSubject1, nameSubject2, nameSubject3, id, nameNote1, nameNote2, nameNote3;
 
 		System.out.println("Please type the id of the student:");
 		id = sc.nextLine();
@@ -211,51 +218,50 @@ public class Main {
 		System.out.println("Please type the name of the first subject: ");
 		nameSubject1 = sc.nextLine();
 
-		System.out.println("Please type the name of the note 1:");
+		System.out.println("Please type the name of the first note:");
 		nameNote1 = sc.nextLine();
 
-		System.out.println("Please type the " + nameSubject1 + " " + nameNote1 + " grade:");
-		note1 = Double.parseDouble(sc.nextLine());
-
-		System.out.println("Please type the name of the note 2:");
+		System.out.println("Please type the name of the second note:");
 		nameNote2 = sc.nextLine();
 
-		System.out.println("Please type the second" + nameSubject1  + " " + nameNote2 + "grade:");
-		note1 = Double.parseDouble(sc.nextLine());
-
-		System.out.println("Please type the name of the note 3:");
+		System.out.println("Please type the name of the third note:");
 		nameNote3 = sc.nextLine();
 
-		System.out.println("Please type the third" + nameSubject1 + " " + nameNote3 + " grade:");
-		note1 = Double.parseDouble(sc.nextLine());
+		System.out.println("Please type the " + nameSubject1 + " " + nameNote1 + " grade:");
+		notes[0] = (Double.parseDouble(sc.nextLine()));
 
+		System.out.println("Please type the second " + nameSubject1  + " " + nameNote2 + "grade:");
+		notes[1] = (Double.parseDouble(sc.nextLine()));
 
-		//CONTINUAR DESDE AQUI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
+		System.out.println("Please type the third " + nameSubject1 + " " + nameNote3 + " grade:");
+		notes[2] = (Double.parseDouble(sc.nextLine()));
+
 		System.out.println("Please type the name of the second subject: ");
 		nameSubject2 = sc.nextLine();
 
-		System.out.println("Please type the first" + nameSubject2 + " mid term:");
-		note1 = Double.parseDouble(sc.nextLine());
+		System.out.println("Please type the first " + nameSubject2 + " " + nameNote1 + " grade:");
+		notes[3] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the second" + nameSubject2 + " mid term:");
-		note1 = Double.parseDouble(sc.nextLine());
+		System.out.println("Please type the second " + nameSubject2 + " " + nameNote2 + " grade:");
+		notes[4] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the third" + nameSubject2 + " mid term:");
-		note1 = Double.parseDouble(sc.nextLine());
+		System.out.println("Please type the third " + nameSubject2 + " " + nameNote3 + " grade:");
+		notes[5] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the name of the second subject: ");
+		System.out.println("Please type the name of the third subject: ");
 		nameSubject3 = sc.nextLine();
 
-		System.out.println("Please type the first" + nameSubject3 + " mid term:");
-		note1 = Double.parseDouble(sc.nextLine());
+		System.out.println("Please type the first " + nameSubject3 + " " + nameNote1 + " grade:");
+		notes[6] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the second" + nameSubject3 + " mid term:");
-		note1 = Double.parseDouble(sc.nextLine());
+		System.out.println("Please type the second " + nameSubject3 + " " + nameNote2 + " grade:");
+		notes[7] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the third" + nameSubject3 + " mid term:");
-		note1 = Double.parseDouble(sc.nextLine());
+		System.out.println("Please type the third " + nameSubject3 + " " + nameNote3 + " grade:");
+		notes[8] = (Double.parseDouble(sc.nextLine()));
 
-		calculator.fillNotes(id, nameSubject1, nameSubject2, nameSubject3, note1, note2, note3);
+		calculator.fillNotes(id, nameSubject1, nameSubject2, nameSubject3, nameNote1, nameNote2, nameNote3);
+		System.out.println(calculator.assignNotes(id, notes));
 
 
 

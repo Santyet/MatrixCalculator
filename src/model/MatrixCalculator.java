@@ -260,7 +260,7 @@ public class MatrixCalculator {
 
 	}
 
-	public String assignNotes(String id, double note1,double note2,double note3,double note4,double note5,double note6,double note7,double note8,double note9){
+	public String assignNotes(String id, double[] notes){
 
 		boolean done = false;
 
@@ -274,7 +274,7 @@ public class MatrixCalculator {
 
 							for(int e = 1;e<5;e++){
 
-								studentMatrices[i][j].setNotes(note1, note2, note3, note4, note5, note6, note7, note8, note9);
+								studentMatrices[i][j].setNotes(notes);
 							}
 						}
 
@@ -286,12 +286,7 @@ public class MatrixCalculator {
 
 		}
 
-		for(int i=1;i<4;i++){
-			for(int j = 1;j<4;j++){
-				
-			}
-
-		}
+		
 
 
 		return "Notes added";

@@ -35,7 +35,13 @@ public class Student {
 
     public void assignNotes(double note1,double note2,double note3,double note4,double note5,double note6,double note7,double note8,double note9){
 
-        
+        for(int i = 1; i<4;i++){
+
+            for(int j = 1; j<4;j++){
+
+
+            }
+        }
 
 
     }
@@ -100,8 +106,17 @@ public class Student {
     }
 
 
-    public void setNotes(double note1,double note2,double note3,double note4,double note5,double note6,double note7,double note8,double note9){
+    public void setNotes(double[] notes){
 
+        int count = 0;
+        for(int i=1;i<4;i++){
+			for(int j = 1;j<4;j++){
+				this.notes[j][i] = ""+notes[count];
+                count++;
+			}
+
+		}
+        
 
 
     }
