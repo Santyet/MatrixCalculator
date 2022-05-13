@@ -211,12 +211,10 @@ public class Main {
 
 		double[] notes = new double[9];
 		String nameSubject1, nameSubject2, nameSubject3, id, nameNote1, nameNote2, nameNote3;
+		int creds1, creds2, creds3;
 
 		System.out.println("Please type the id of the student:");
 		id = sc.nextLine();
-
-		System.out.println("Please type the name of the first subject: ");
-		nameSubject1 = sc.nextLine();
 
 		System.out.println("Please type the name of the first note:");
 		nameNote1 = sc.nextLine();
@@ -227,37 +225,49 @@ public class Main {
 		System.out.println("Please type the name of the third note:");
 		nameNote3 = sc.nextLine();
 
+		System.out.println("Please type the name of the first subject: ");
+		nameSubject1 = sc.nextLine();
+
+		System.out.println("Please type the ammount of credits of this subject:");
+		creds1 = Integer.parseInt(sc.nextLine());
+		
 		System.out.println("Please type the " + nameSubject1 + " " + nameNote1 + " grade:");
 		notes[0] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the second " + nameSubject1  + " " + nameNote2 + "grade:");
+		System.out.println("Please type the " + nameSubject1  + " " + nameNote2 + "grade:");
 		notes[1] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the third " + nameSubject1 + " " + nameNote3 + " grade:");
+		System.out.println("Please type the " + nameSubject1 + " " + nameNote3 + " grade:");
 		notes[2] = (Double.parseDouble(sc.nextLine()));
 
 		System.out.println("Please type the name of the second subject: ");
 		nameSubject2 = sc.nextLine();
 
-		System.out.println("Please type the first " + nameSubject2 + " " + nameNote1 + " grade:");
+		System.out.println("Please type the ammount of credits of this subject:");
+		creds1 = Integer.parseInt(sc.nextLine());
+
+		System.out.println("Please type the " + nameSubject2 + " " + nameNote1 + " grade:");
 		notes[3] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the second " + nameSubject2 + " " + nameNote2 + " grade:");
+		System.out.println("Please type the " + nameSubject2 + " " + nameNote2 + " grade:");
 		notes[4] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the third " + nameSubject2 + " " + nameNote3 + " grade:");
+		System.out.println("Please type the " + nameSubject2 + " " + nameNote3 + " grade:");
 		notes[5] = (Double.parseDouble(sc.nextLine()));
 
 		System.out.println("Please type the name of the third subject: ");
 		nameSubject3 = sc.nextLine();
 
-		System.out.println("Please type the first " + nameSubject3 + " " + nameNote1 + " grade:");
+		System.out.println("Please type the ammount of credits of this subject:");
+		creds1 = Integer.parseInt(sc.nextLine());
+
+		System.out.println("Please type the " + nameSubject3 + " " + nameNote1 + " grade:");
 		notes[6] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the second " + nameSubject3 + " " + nameNote2 + " grade:");
+		System.out.println("Please type the " + nameSubject3 + " " + nameNote2 + " grade:");
 		notes[7] = (Double.parseDouble(sc.nextLine()));
 
-		System.out.println("Please type the third " + nameSubject3 + " " + nameNote3 + " grade:");
+		System.out.println("Please type the " + nameSubject3 + " " + nameNote3 + " grade:");
 		notes[8] = (Double.parseDouble(sc.nextLine()));
 
 		calculator.fillNotes(id, nameSubject1, nameSubject2, nameSubject3, nameNote1, nameNote2, nameNote3);
